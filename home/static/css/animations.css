@@ -1,0 +1,31 @@
+.anim-ex-50{
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.anim-ex-50.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.anim-sx-50{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease-in-out;
+}
+.anim-sx-50.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.anim-ty-50{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.5s ease-in-out;
+}
+.anim-ty-50.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+  
