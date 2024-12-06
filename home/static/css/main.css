@@ -1,0 +1,154 @@
+#boton-descarga, #qr-descarga {
+    display: none;
+}
+
+#qr-descarga{
+    height: auto;
+    width: 300px;
+}
+
+/* BOTON DESCARGA  */
+.boton-descargar {
+    position: relative;
+    padding: 15px;
+    background-color: rgb(235, 81, 81);
+    color: white;
+    font-weight: 600;
+}
+
+.boton-descargar::before,
+.boton-descargar::after {
+    content: "";
+    position: absolute;
+    left: 5%; 
+    right: 5%; 
+    height: 3px; 
+    background-color: rgb(224, 128, 128); 
+}
+
+.boton-descargar::before {
+    top: 5px; 
+}
+
+.boton-descargar::after {
+    bottom: 5px; 
+}
+
+body{
+    background-color: #ffffff; /* Fondo base */
+    background-image: radial-gradient(circle, #ff8800 10%, transparent 10%);
+    background-size: 20px 20px; /* Tamaño del patrón */
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 330px;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* CONTENEDORES  */
+.descarga{
+    height: auto;
+    width: 100%;
+
+    background-color:rgba(0, 0, 0, 0.700);
+    backdrop-filter: blur(3px);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    
+    min-height: 600px;
+    height: 100%; 
+
+    background-color: #D7974D;
+}
+
+.funciones-persona{
+    display: flex;
+    justify-content: center;
+
+    min-height: 400px;
+    height: 100%; 
+}
+
+.funciones-empresa{
+    display: flex;
+    justify-content: center;
+    
+    min-height: 400px;
+    height: 100%; 
+
+    background-color: #D7974D;
+}
+
+/* IAMGENES */
+.img-logo{
+    width: 50%;
+    object-fit: contain;
+}
+
+.img-group{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.img-item{
+    max-height: 500px;
+    width: auto;
+    height: auto; 
+}
+
+/* BORDES */
+.curved-1{
+    border-radius: 10px;
+}
+.curved-2{
+    border-radius: 20px;
+}
+.curved-3{
+    border-radius: 30px;
+}
+.curved-4{
+    border-radius: 40px;
+}
+.curved-5{
+    border-radius: 50px;
+}
+
+.outline-1{
+    border: 4px solid #000000;
+}
+/* COLORES */
+.color-logo{
+    color: #D7974D;
+}
+
+/* VISTA COMPUTADOR */
+@media (min-width: 1024px) {
+    .img-logo {
+        width: 250px;
+    }
+}
+/* VISTA MOVIL */
+@media (max-width: 768px){
+    .funciones-persona{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+}
+

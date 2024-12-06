@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img class="img-logo m-auto bg-white" src="{% static 'img/logo.png' %}" alt="logo">
+    </header>
+    <div class="descarga d-flex justify-content-center ">
+        <div id="boton-descarga" class=" py-3 justify-content-center">
+            <a  class="text-decoration-none text-reset" href="https://github.com/SkatOficial/LinkedOut-APK/archive/refs/tags/v0.1.0.zip">
+                <div class="boton-descargar d-flex justify-content-center align-items-center">
+                    <img class = "me-2" src="{% static 'img/android.svg' %}" alt="android-logo" width="25">
+                    <p class="m-0">ANDROID - DESCARGALO</p>
+                </div>
+            </a>
+        </div>
+        <div id="qr-descarga" class=" py-3 aling-items-center justify-content-center flex-column">
+            <h1 class="text-white mx-auto mb-3">Descárgalo ya.</h1>
+            <img class ="mx-auto "src="{% static 'img/qr.png' %}" alt="img-qr">
+        </div>
+    </div>
+    <!-- QUE ES -->
+    <div class = "container-fluid ">
+        <div class = "row about py-3 ">
+            <div class="col-sm-12 col-md-6 px-4 d-flex flex-column align-items-center justify-content-center text-white">
+                <h1 class="display-4 mb-4 "> ¿Qué es? </h1>
+                <p class="text-center lead fs-4">Es una aplicación móvil en la cual gente convencional, sin ninguna habilidad en especial... como tú, pueda encontrar el trabajo de sus sueños (o tal vez no)
+                </p>
+                <p class="text-center lead fs-4">Ademas las empresas podrán encontrar individuos para hacer sentir a sus demás empleados más inteligentes de lo que realmente son.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 img-group m-auto d-flex flex-column justify-content-center align-items-center">
+                <img class="img-item curved-4 outline-1" src="{% static 'img/perfil.jpg' %}" alt="perfil">
+            </div>
+        </div>
+    </div>
+
+    <!-- FUNCIONES DE PERSONA -->
+    <div class = "container-fluid ">
+        <div class = "row funciones-persona">
+            <div class="col-sm-12 col-md-6 img-group d-flex justify-content-center align-items-center m-auto py-3">
+                <img class=" img-item curved-4 outline-1" src="{% static 'img/postulacion.jpg' %}" alt="perfil">
+            </div>
+            <div class="col-sm-12 col-md-6 px-4 bg-white d-flex flex-column align-items-center justify-content-center">
+                <h1 class="text-center  mb-4 display-4"> ¿Qué puedes hacer como persona comun y desempleada? </h1>
+                <p class="text-center lead fs-4 ">Podrás encontrar trabajos ridículamente innecesarios <span class="fw-bold color-logo">¡¡PERFECTOS PARA TI!!</span></p>
+                <p class="text-center lead fs-4 ">Además, podrás visualizar el estado de todas tus postulaciones y revisar todas las veces que te han rechazado.</p>
+                <p class="text-center lead fs-4 ">También podrás modificar tu perfil, asignando tus experiencias laborales y educación (que dudamos que las tengas).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FUNCIONES DE EMPRESAS -->
+    <div class = "container-fluid ">
+        <div class = "row funciones-empresa py-3">          
+            <div class="col-sm-12 col-md-6 px-4 d-flex flex-column align-items-center justify-content-center text-white">
+                <h1 class="text-center mb-4 display-4"> ¿Qué puedes hacer como empresa? </h1>
+                <p class="text-center lead fs-4">Podrás publicar trabajos, por más estúpidos que sean, a las personas les encantan.</p>
+                <p class="text-center lead fs-4">Además, podrás visualizar el estado de todos tus trabajos y revisar a todos las personas que han postulados.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 img-group d-flex justify-content-center align-items-center m-auto">
+                <img class=" img-item curved-4 outline-1" src="{% static 'img/trabajos.jpg' %}" alt="perfil">
+            </div>   
+        </div>
+    </div>
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/agent-user.js' %}"></script>
+</body>
+</html>
