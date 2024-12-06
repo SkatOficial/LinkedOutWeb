@@ -8,32 +8,6 @@
     width: 300px;
 }
 
-/* BOTON DESCARGA  */
-.boton-descargar {
-    position: relative;
-    padding: 15px;
-    background-color: rgb(235, 81, 81);
-    color: white;
-    font-weight: 600;
-}
-
-.boton-descargar::before,
-.boton-descargar::after {
-    content: "";
-    position: absolute;
-    left: 5%; 
-    right: 5%; 
-    height: 3px; 
-    background-color: rgb(224, 128, 128); 
-}
-
-.boton-descargar::before {
-    top: 5px; 
-}
-
-.boton-descargar::after {
-    bottom: 5px; 
-}
 
 body{
     background-color: #ffffff;
@@ -59,7 +33,7 @@ p {
     overflow-wrap: anywhere;
 }
 
-/* CONTENEDORES  */
+/*-----------------  CONTENEDORES -----------------  */
 .descarga{
     height: auto;
     width: 100%;
@@ -96,7 +70,41 @@ p {
     background-color: #D7974D;
 }
 
-/* IAMGENES */
+/* ----------------- BOTON DESCARGA -----------------  */
+.boton-descargar {
+    position: relative;
+    padding: 15px;
+    background-color: rgb(235, 81, 81);
+    color: white;
+    font-weight: 600;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.boton-descargar:active {
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.85);
+}
+
+.boton-descargar::before,
+.boton-descargar::after {
+    content: "";
+    position: absolute;
+    left: 5%; 
+    right: 5%; 
+    height: 3px; 
+    background-color: rgb(224, 128, 128); 
+}
+
+.boton-descargar::before {
+    top: 5px; 
+}
+
+.boton-descargar::after {
+    bottom: 5px; 
+}
+
+/*----------------- IAMGENES ----------------- */
 .img-logo{
     width: 50%;
     object-fit: contain;
@@ -115,7 +123,7 @@ p {
     height: auto; 
 }
 
-/* BORDES */
+/* ----------------- BORDES ----------------- */
 .curved-1{
     border-radius: 10px;
 }
@@ -135,18 +143,18 @@ p {
 .outline-1{
     border: 4px solid #000000;
 }
-/* COLORES */
+/* ----------------- COLORES ----------------- */
 .color-logo{
     color: #D7974D;
 }
 
-/* VISTA COMPUTADOR */
+/* ----------------- VISTA COMPUTADOR ----------------- */
 @media (min-width: 1024px) {
     .img-logo {
         width: 250px;
     }
 }
-/* VISTA MOVIL */
+/* ----------------- VISTA MOVIL ----------------- */
 @media (max-width: 768px){
     .funciones-persona{
         display: flex;
