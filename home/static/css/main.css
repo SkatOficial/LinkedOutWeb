@@ -1,3 +1,4 @@
+
 #boton-descarga, #qr-descarga {
     display: none;
 }
@@ -35,9 +36,9 @@
 }
 
 body{
-    background-color: #ffffff; /* Fondo base */
+    background-color: #ffffff;
     background-image: radial-gradient(circle, #ff8800 10%, transparent 10%);
-    background-size: 20px 20px; /* Tamaño del patrón */
+    background-size: 20px 20px; 
 }
 
 header{
