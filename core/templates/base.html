@@ -19,10 +19,16 @@
     </header>
     <nav id="nav" class="nav"> 
         <img class="logo" src="{% static 'img/logo-mini.svg' %}" alt="logo-nav" onclick="location.href='#';">
-        <ul class="d-flex justify-content-center align-items-center m-0 gap-4">
-            <li onclick="location.href='#section-que-es';">¿Qué es?</li>
-            <li onclick="location.href='#section-funciones-persona';">¿Qué puedes hacer como persona?</li>
-            <li onclick="location.href='#section-funciones-compañia';">¿Qué puedes hacer como compañia?</li>
+        <ul>
+            <li onclick="location.href='#section-que-es';"><p>¿Qué es?</p></li>
+            <li> 
+                <p>Funciones</p>
+                <ul class="drop-menu">
+                    <li onclick="location.href='#section-funciones-persona';"><p>Trabajador</p></li>
+                    <li onclick="location.href='#section-funciones-compañia';"><p>Compañia</p></li>
+                </ul>
+            </li>
+            
         </ul>
     </nav>
 

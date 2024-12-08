@@ -13,11 +13,14 @@ header{
 }
 p {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 !important;
     text-align: center;
     line-height: 1.6;
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
 

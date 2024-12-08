@@ -6,6 +6,8 @@
 }
 
 .nav{
+    display: flex;
+    align-items: center;
     width: 100%;
     background-color: rgba(255, 255, 255);
     top:0;
@@ -18,30 +20,81 @@
     height: 50px;
     width: auto;
 
-    margin: 20px;
+    margin: 10px;
 
-    transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out; 
 }
 
-.nav .logo.logo:hover{
+.nav .logo:hover{
     transition: 0.2s ease-in-out;
     transform: scale(1.1);
     cursor: pointer;
 }
 
 .nav ul{
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: flex;
+    flex-grow: 1;
+    justify-content: start;
+    gap: 10px;
+    list-style: none;
+    margin:0;
+    padding: 0;
 
     transition: 0.2s ease-in-out;
 }
 
 .nav ul li{
+    display: block;
+    align-items: center;
+    position: relative;
+    
+}
+.nav ul li p{
+    color: #D7974D;
     transition: 0.1s ease-in-out;
 }
-.nav ul li:hover{
+
+.nav ul li p:hover{
     transition: 0.2s ease-in-out;
-    color: #D7974D;
+    color: #422611;
     cursor: pointer;
 }
+
+.nav ul li ul.drop-menu{
+    background-color: #D7974D;
+    position: absolute;
+    width: auto;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-top: none;
+
+    left: 10px;
+    z-index: 999;
+    display: block;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+.nav ul li:hover ul.drop-menu{
+    visibility: visible;
+    opacity: 1;
+    transition:  0.5s;
+}
+
+.nav ul li ul.drop-menu li{
+    margin: 10px;
+}
+
+.nav ul li ul.drop-menu li p{
+    color: white;
+    transition: 0.1s;
+}
+
+.nav ul li ul.drop-menu li p:hover{
+    color: #422611;
+    transition: 0.1s;
+}
+
