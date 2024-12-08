@@ -2,9 +2,10 @@
 {% load static %}
 
     {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
         <link rel="stylesheet" href="{% static 'css/animations.css' %}">
         <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
     {% endblock %}
     
 
@@ -29,7 +30,7 @@
         </div>
 
         <!-- QUE ES -->
-        <div class = "container-fluid ">
+        <div id ="section-que-es" class = "container-fluid ">
             <div class = "row about py-3 ">
                 <div class="col-12 col-md-6 px-4 d-flex flex-column align-items-center justify-content-center text-white">
                     <h1 class="display-4 mb-4 "> ¿Qué es? </h1>
@@ -44,7 +45,7 @@
         </div>
 
         <!-- FUNCIONES DE PERSONA -->
-        <div class = "container-fluid">
+        <div id ="section-funciones-persona" class = "container-fluid">
             <div class = "row funciones-persona py-3">
                 <div class="col-12 col-md-6 img-group d-flex justify-content-center align-items-center m-auto py-3 ">
                     <img class=" img-item curved-4 outline-1 anim-sx-50" src="{% static 'img/postulacion.jpg' %}" alt="img-postulacion">
@@ -59,7 +60,7 @@
         </div>
 
         <!-- FUNCIONES DE EMPRESAS -->
-        <div class = "container-fluid">
+        <div id ="section-funciones-empresa" class = "container-fluid">
             <div class = "row funciones-empresa py-3">          
                 <div class="col-12 col-md-6 px-4 d-flex flex-column align-items-center justify-content-center text-white">
                     <h1 class="text-center mb-4 display-4"> ¿Qué puedes hacer como empresa? </h1>

@@ -11,20 +11,37 @@
     top:0;
     left:0;
     z-index: 1000;
+    transition: 0.05s ease-in-out;
 }
-
+ 
 .nav .logo{
     height: 50px;
     width: auto;
 
     margin: 20px;
 
-    transition: 0.05s;
+    transition: 0.1s ease-in-out;
 }
 
 .nav .logo.logo:hover{
     transition: 0.2s ease-in-out;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
+.nav ul{
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
+    transition: 0.2s ease-in-out;
+}
+
+.nav ul li{
+    transition: 0.1s ease-in-out;
+}
+.nav ul li:hover{
+    transition: 0.2s ease-in-out;
+    color: #D7974D;
+    cursor: pointer;
+}
