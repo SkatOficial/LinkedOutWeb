@@ -39,15 +39,13 @@
     list-style: none;
     margin:0;
     padding: 0;
-
+    box-sizing: border-box;
     transition: 0.2s ease-in-out;
 }
 
 .nav ul li{
     display: block;
-    align-items: center;
     position: relative;
-    
 }
 .nav ul li p{
     color: #D7974D;
@@ -60,11 +58,12 @@
     cursor: pointer;
 }
 
+/* Drop menu */
 .nav ul li ul.drop-menu{
     background-color: #D7974D;
     position: absolute;
     width: auto;
-
+    
     border: 1px solid rgb(255, 255, 255);
     border-top: none;
 
@@ -96,5 +95,84 @@
 .nav ul li ul.drop-menu li p:hover{
     color: #422611;
     transition: 0.1s;
+}
+
+/* Menu movil */
+#button-menu{
+    display: none;
+
+    margin: 10px;
+}
+
+
+
+/* ----------------- VISTA MOVIL ----------------- */
+@media (max-width: 768px){
+    /* Menu movil */
+    #button-menu{
+        display: flex;
+    }
+    .nav{
+        justify-content: space-between;
+    }
+    .nav ul{
+        flex-direction: column;
+        justify-content: center;
+        height: 0px;
+        width: 100%;
+        gap: 10px;
+        list-style: none;
+        margin:0;
+        padding: 0;  
+        overflow: hidden;
+    }
+
+    .nav ul li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .nav ul li ul.drop-menu{
+        background-color: #422611;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-top: 1px solid #D7974D;
+    
+        left: 0px;
+        z-index: 999;
+        display: none;
+        
+        visibility: visible;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    
+    .nav ul li[data-active='true'] ul.drop-menu{
+        display: block;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .nav ul li ul.drop-menu li{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .nav ul li ul.drop-menu li p{
+        text-align: center;
+        color: white;
+        transition: 0.1s;
+    }
+
+    .nav ul li ul.drop-menu li p:hover{
+        color: #D7974D;
+        transition: 0.1s;
+    }
 }
 

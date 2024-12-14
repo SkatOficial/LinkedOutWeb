@@ -19,16 +19,16 @@
     </header>
     <nav id="nav" class="nav"> 
         <img class="logo" src="{% static 'img/logo-mini.svg' %}" alt="logo-nav" onclick="location.href='#';">
+        <button id="button-menu">BOTON</button>
         <ul>
             <li onclick="location.href='#section-que-es';"><p>¿Qué es?</p></li>
-            <li> 
-                <p>Funciones</p>
+            <li class="container-drop-menu"> 
+                <p class="title-drop-menu">Funciones</p>
                 <ul class="drop-menu">
                     <li onclick="location.href='#section-funciones-persona';"><p>Trabajador</p></li>
                     <li onclick="location.href='#section-funciones-compañia';"><p>Compañia</p></li>
                 </ul>
             </li>
-            
         </ul>
     </nav>
 
@@ -40,6 +40,8 @@
 
     </footer>
     <script src="{% static 'js/nav.js' %}"> </script>
+    <script src="{% static 'js/nav-animation.js' %}"> </script>
+
     {% block scripts %}{% endblock %}
 </body>
 </html>
