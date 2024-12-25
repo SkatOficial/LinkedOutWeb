@@ -26,11 +26,11 @@ document.addEventListener("click", (event) => {
   const parentElement = clickedElement.parentElement;
 
   if(clickedElement.classList.contains("title-drop-menu")){
-    if(parentElement.getAttribute('data-active') == 'true'){
-      parentElement.setAttribute('data-active', 'false');
+    if(parentElement.getAttribute('data-dropped') == 'true'){
+      parentElement.setAttribute('data-dropped', 'false');
     }else{
       resetDataActive();
-      parentElement.setAttribute('data-active', 'true');
+      parentElement.setAttribute('data-dropped', 'true');
     }
   }
 });
@@ -40,13 +40,17 @@ const buttonMenu = document.getElementById("button-menu")
 buttonMenu.addEventListener("click",(event) => {
   const navElement = document.querySelector('.nav ul')
   navElement.classList.toggle("open");
+  if(!navElement.classList.contains("open")){
+    resetDataActive();
+  }
 })
-//------------REINICIO DE DATA-ACTIVE ------------
+
+//------------REINICIO DE TODOS LOS DATA-ACTIVE ------------
 function resetDataActive(){
   const elementsData = document.getElementsByClassName("container-drop-menu");
 
   for (let i = 0; i < elementsData.length; i++) {
-    elementsData[i].setAttribute('data-active', 'false');
+    elementsData[i].setAttribute('data-dropped', 'false');
   }
 }
 
@@ -54,7 +58,7 @@ function resetDataActive(){
 const mediaQuery = window.matchMedia("(min-width: 768px)");
 
 function handleResize(event) {
-  const navElement = document.querySelector('.nav ul')
+  const navElement = document.getElementById('content-nav')
 
   if (event.matches) {
     resetDataActive();

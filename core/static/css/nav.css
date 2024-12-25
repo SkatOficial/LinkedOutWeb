@@ -174,7 +174,7 @@
     }
 
     
-    .nav ul li[data-active='true'] ul.drop-menu{
+    .nav ul li[data-dropped='true'] ul.drop-menu{
         height: 100px;
         transition: 0.5s;
     }
