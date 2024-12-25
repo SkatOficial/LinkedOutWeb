@@ -34,18 +34,12 @@ document.addEventListener("click", (event) => {
     }
   }
 });
-
 //------------EVENTO CLICK DESPLEGAR MENU------------
 const buttonMenu = document.getElementById("button-menu")
 
 buttonMenu.addEventListener("click",(event) => {
   const navElement = document.querySelector('.nav ul')
-  if (navElement.style.height != "auto") {
-    navElement.style.height = "auto";
-  } else {
-    navElement.style.height = "0px";
-  }
-
+  navElement.classList.toggle("open");
 })
 //------------REINICIO DE DATA-ACTIVE ------------
 function resetDataActive(){
