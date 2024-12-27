@@ -21,19 +21,19 @@ window.addEventListener('scroll', () => {
   }});
 
 //------------EVENTO CLICK DROP MENU------------
-document.addEventListener("click", (event) => {
-  const clickedElement = event.target;
-  const parentElement = clickedElement.parentElement;
+const dropMenus = document.querySelectorAll(".container-drop-menu")
 
-  if(clickedElement.classList.contains("title-drop-menu")){
-    if(parentElement.getAttribute('data-dropped') == 'true'){
-      parentElement.setAttribute('data-dropped', 'false');
+dropMenus.forEach(dropMenu => {
+  dropMenu.addEventListener("click", function() {
+    if(dropMenu.getAttribute('data-dropped') == 'true'){
+      dropMenu.setAttribute('data-dropped', 'false');
     }else{
       resetDataActive();
-      parentElement.setAttribute('data-dropped', 'true');
+      dropMenu.setAttribute('data-dropped', 'true');
     }
-  }
-});
+  });
+})
+
 //------------EVENTO CLICK DESPLEGAR MENU------------
 const buttonMenu = document.getElementById("button-menu")
 

@@ -160,15 +160,53 @@
         padding: 15px 0px;
     }
 
-    .nav ul li p{
-        color: #202124;
+    .nav ul li div p{
+        color: #D7974D;
         transition: 0.1s ease-in-out;
     }
     
-    .nav ul li p:hover{
+    .nav ul li:hover div p{
         transition: 0.2s ease-in-out;
-        color: #D7974D;
+        color: #422611 !important;
         cursor: pointer;
+    }
+
+    .nav ul li[data-dropped='false'] div p{
+        color: #D7974D;
+        transition: 0.1s ease-in-out;
+    }
+    
+    .nav ul li[data-dropped='true'] div p{
+        transition: 0.2s ease-in-out;
+        color: #202124;
+        cursor: pointer;
+    }
+
+    .nav ul li div .arrow-container svg{
+        width: 11px;
+        margin: 0px 2px;
+        margin-bottom: 2px;
+        fill: #D7974D;
+        transition: 0.5s ease-out;
+    }
+
+    .nav ul li:hover div .arrow-container svg{
+        transition: 0.5s ease-out;
+        fill: #422611 !important;
+        transform: rotateX(180deg);
+    }
+    .nav ul li[data-dropped='false'] div .arrow-container svg{
+        width: 11px;
+        margin: 0px 2px;
+        margin-bottom: 2px;
+        fill: #D7974D;
+        transition: 0.5s ease-out;
+    }
+    
+    .nav ul li[data-dropped='true'] div .arrow-container svg{
+        transition: 0.5s ease-out;
+        fill: #422611;
+        transform: rotateX(180deg);
     }
 
     .nav ul li ul.drop-menu{
@@ -186,9 +224,8 @@
 
     }
 
-    
     .nav ul li[data-dropped='true'] ul.drop-menu{
-        height: 100px;
+        height: 120px;
         transition: 0.5s;
     }
 
