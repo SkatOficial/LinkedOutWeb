@@ -68,3 +68,19 @@ function handleResize(event) {
 
 handleResize(mediaQuery);
 mediaQuery.addEventListener("change", handleResize);
+
+//------------ Colocacion de felchas .svg en sus contenedores ------------
+  const arrowUrl = "/static/img/arrow.svg";
+
+  const containers = document.querySelectorAll('.arrow-container');
+  
+  fetch(arrowUrl)
+      .then(response => {
+          return response.text();
+      })
+      .then(data => {
+          containers.forEach(container => {
+              container.innerHTML = data;
+          });
+      })
+
