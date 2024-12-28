@@ -4,6 +4,7 @@ displayDropMenu()
 displayMenu()
 resetNav()
 addArrowsDropMenus()
+ClosMenu()
 
 //------------CAMBIA EL NAV A FIXED------------
 /* cuando el nav llega a la parte superior de la pantalla se convierte a fixed*/
@@ -60,6 +61,22 @@ function displayMenu(){
     }
   })
 
+}
+
+//------------EVENTO CLICK CLOSE MENU------------
+/* agrega un evento click para cerrar el menu del nav a cada item del nav*/
+function ClosMenu(){
+  const itemsnav = document.querySelectorAll(".item-nav")
+
+  itemsnav.forEach(dropMenu => {
+    dropMenu.addEventListener("click",(event) => {
+      event.stopPropagation();
+      const navElement = document.querySelector('.nav ul')
+      navElement.classList.remove("open");
+
+      resetDataActive();
+    })
+  })
 }
 
 //------------REINICIO DE TODOS LOS DATA-ACTIVE ------------
