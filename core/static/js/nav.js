@@ -53,11 +53,18 @@ function displayDropMenu(){
 function displayMenu(){
   const buttonMenu = document.getElementById("button-menu")
 
+
   buttonMenu.addEventListener("click",(event) => {
     const navElement = document.querySelector('.nav ul')
     navElement.classList.toggle("open");
     if(!navElement.classList.contains("open")){
       resetDataActive();
+    }
+
+    if(navElement.classList.contains("open")){
+      buttonMenu.setAttribute('data-opened', 'true');
+    }else{
+      buttonMenu.setAttribute('data-opened', 'false');
     }
   })
 
@@ -72,8 +79,10 @@ function ClosMenu(){
     dropMenu.addEventListener("click",(event) => {
       event.stopPropagation();
       const navElement = document.querySelector('.nav ul')
-      navElement.classList.remove("open");
+      const buttonMenu = document.getElementById("button-menu")
 
+      navElement.classList.remove("open");
+      buttonMenu.setAttribute('data-opened', 'false');
       resetDataActive();
     })
   })

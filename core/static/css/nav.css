@@ -72,6 +72,7 @@
     fill: #422611;
     transform: rotateX(180deg);
 }
+
 /* Drop menu */
 .nav ul li ul.drop-menu{
     background-color: #D7974D;
@@ -114,10 +115,8 @@
 /* Menu movil */
 #button-menu{
     display: none;
-
     margin: 10px;
 }
-
 
 
 /* ----------------- VISTA MOVIL ----------------- */
@@ -125,7 +124,33 @@
     /* Menu movil */
     #button-menu{
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        gap: .65rem;
     }
+
+    #button-menu div{
+        height: 2px;
+        width: 100%;
+        background: black;
+        transform-origin:left;
+        transition: all 0.5s ease;
+    }
+    
+
+    #button-menu[data-opened="true"] div:first-child{ 
+        transform: rotate(45deg);
+    }
+    #button-menu[data-opened="true"] div:nth-child(2){ 
+        opacity: 0;
+    }
+    #button-menu[data-opened="true"] div:last-child{ 
+        transform: rotate(-45deg);
+    }
+
     .nav{
         justify-content: space-between;
     }
