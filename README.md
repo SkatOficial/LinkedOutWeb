@@ -13,8 +13,16 @@ Aunque la página está en su mayoría construida con CSS y JavaScript, también
    En la carpeta raíz del repositorio, ejecuta el siguiente comando:  
    ```bash
    pip install -r requirements.txt
+   ```
 
  3. **Inicia el servidor de desarrollo.**  
    Ejecuta el siguiente comando para iniciar el servidor:
-	 ```bash
+    ```bash
     python manage.py runserver
+    ```
+  ## Acceso a la Página Estática
+
+   Puedes acceder a la página estática directamente desde este enlace:  
+   [https://linkedoutweb.onrender.com](https://linkedoutweb.onrender.com)
+
+>  **Nota:** Puede tomar unos segundos en cargar debido a que se encuentra alojada en un servidor gratuito.
